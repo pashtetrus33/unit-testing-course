@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -9,8 +8,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
@@ -117,7 +115,7 @@ public class CalculatorTest {
 
     // <-------JUnit-Jupiter-Params
     @ParameterizedTest
-    @ValueSource(chars = { '&', '#', '=' })
+    @ValueSource(chars = {'&', '#', '='})
     void expectedIllegalStateExpressionToo(char i) {
         // Arrange
         Calculator calculator = new Calculator();
@@ -161,5 +159,11 @@ public class CalculatorTest {
                 .describedAs("Input error");
         System.setIn(inputStream);
         System.setOut(null);
+    }
+
+    @Test
+    void circleLengthCompute() {
+        assertTrue(Math.abs(31 - Calculator.circleLengthCompute(5)) < 1);
+        assertThat(Calculator.circleLengthCompute(5)).isEqualTo(31.41592653589793);
     }
 }

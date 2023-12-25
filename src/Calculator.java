@@ -119,4 +119,8 @@ public class Calculator {
         }
         return result;
     }
+
+    public static double circleLengthCompute(int radius) {
+        return 2 * Math.PI * radius;
+    }
 }
