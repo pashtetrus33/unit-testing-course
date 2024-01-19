@@ -1,6 +1,7 @@
 package seminars.fourth.weather;
 
 public class WeatherReporter {
+
     private WeatherService weatherService;
 
     // Внедрение зависимости через конструктор
@@ -10,7 +11,7 @@ public class WeatherReporter {
     }
 
     public String generateReport() {
-        if (weatherService == null){
+        if (weatherService == null) {
             throw new NullPointerException("WeatherService is null");
         }
         int temperature = weatherService.getCurrentTemperature();

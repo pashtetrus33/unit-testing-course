@@ -1,6 +1,5 @@
 package seminars.fourth;
 
-import seminars.fourth.weather.WeatherReporter;
 import seminars.fourth.weather.WeatherService;
 
 public class Main {
@@ -19,13 +18,13 @@ public class Main {
         WeatherService weatherService = new WeatherService();
 
         // Создаем объект WeatherReporter, передаем ему WeatherService в конструктор.
-        WeatherReporter weatherReporter = new WeatherReporter(weatherService);
+        //WeatherReporter weatherReporter = new WeatherReporter(weatherService);
 
         // Получаем отчет о погоде.
-        String report = weatherReporter.generateReport();
+        //String report = weatherReporter.generateReport();
 
         // Выводим отчет на консоль.
-        System.out.println(report);
+        //System.out.println(report);
 
     }
 
